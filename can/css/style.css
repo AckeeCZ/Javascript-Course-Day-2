@@ -1,0 +1,919 @@
+body, html, * {
+  margin: 0;
+  padding: 0; }
+
+body:after {
+  display: none;
+  content: url("../img/icon-voice-off.png") url("../img/icon-music-off.png") url("../img/icon-voice-on.png") url("../img/icon-music-on.png"); }
+
+ul {
+  margin: 0; }
+  ul li {
+    margin: 0;
+    pading: 0;
+    list-style-type: none;
+    display: inline-block; }
+
+body {
+  font-family: "open_sansregular";
+  font-size: 14px;
+  color: #656565; }
+
+a {
+  text-decoration: underline; }
+  a:hover {
+    text-decoration: none; }
+
+h1 {
+  font-family: "open_sansregular";
+  font-size: 50px;
+  color: #494949;
+  text-transform: uppercase;
+  margin-bottom: 30px; }
+
+h2 {
+  font-family: "open_sansbold";
+  font-size: 20px;
+  color: #717171;
+  text-transform: uppercase;
+  margin: 60px 0 30px 0; }
+
+hr {
+  background-color: #d9d9d9;
+  border: 0;
+  height: 1px; }
+
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+
+.relative {
+  margin: auto;
+  width: 903px; }
+
+.main {
+  margin: auto;
+  width: 903px; }
+
+.both {
+  clear: both; }
+
+.hide {
+  display: none; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.wide {
+  width: 640px; }
+
+.narrow {
+  width: 333px; }
+
+strong {
+  font-family: open_sansbold; }
+
+.box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1200; }
+  .box .box-inside {
+    position: absolute;
+    width: 903px;
+    height: 593px;
+    top: 50%;
+    left: 50%;
+    margin-left: -451px;
+    margin-top: -297px; }
+
+#video-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1300;
+  top: 0;
+  display: none; }
+  #video-box video {
+    position: absolute;
+    width: 1000px;
+    height: 650px;
+    top: 50%;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -325px; }
+
+ul.select-option {
+  position: relative;
+  padding: 200px 100px 0 100px; }
+  ul.select-option li a {
+    width: 226px;
+    height: 226px;
+    display: block; }
+    ul.select-option li a img {
+      width: 100%; }
+
+#back a {
+  width: 85px;
+  height: 85px;
+  display: block;
+  position: fixed;
+  left: 10px;
+  z-index: 10000;
+  background: url("../img/back.png") center center no-repeat;
+  background-size: contain; }
+
+#icons {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1500; }
+  #icons #icon-music, #icons #icon-voice, #icons #icon-logout {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-position: top left;
+    background-size: cover; }
+  #icons #icon-music.on {
+    background-image: url("../img/icon-music-on.png"); }
+  #icons #icon-music.off {
+    background-image: url("../img/icon-music-off.png"); }
+  #icons #icon-voice.on {
+    background-image: url("../img/icon-voice-on.png"); }
+  #icons #icon-voice.off {
+    background-image: url("../img/icon-voice-off.png"); }
+  #icons #icon-logout {
+    background-image: url("../img/icon-logout.png"); }
+
+@-webkit-keyframes myfirst {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+@keyframes myfirst {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+#index {
+  -webkit-animation: myfirst 1s ease;
+  animation: myfirst 1s;
+  font-size: 20px;
+  margin: 20px;
+  position: relative;
+  z-index: 100; }
+  #index a {
+    padding: 7px 10px;
+    margin: 3px;
+    background: #222222;
+    color: white;
+    text-decoration: none;
+    display: inline-block; }
+  #index #back a {
+    display: none !important; }
+
+#profile {
+  width: 85px;
+  height: 85px;
+  display: block;
+  position: fixed;
+  background-size: cover;
+  z-index: 10000; }
+  #profile .number {
+    color: black;
+    font-family: Sans-Serif;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 55px;
+    text-align: right; }
+    #profile .number span {
+      text-align: center;
+      padding-top: 5px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.6); }
+
+#heroes {
+  position: fixed;
+  top: 0px;
+  z-index: 1200; }
+  #heroes .background {
+    background: url("../img/heroes-background.png") no-repeat top center;
+    background-size: cover;
+    width: 903px;
+    height: 593px;
+    position: relative; }
+    #heroes .background .profiles a {
+      width: 85px;
+      height: 85px;
+      display: block;
+      position: absolute;
+      background-size: cover; }
+      #heroes .background .profiles a#profile-pes {
+        background-image: url("../img/heroes/pes.png");
+        top: 125px;
+        left: 540px; }
+      #heroes .background .profiles a#profile-srna {
+        background-image: url("../img/heroes/srna.png");
+        top: 245px;
+        left: 540px; }
+      #heroes .background .profiles a#profile-kravicka {
+        background-image: url("../img/heroes/kravicka.png");
+        top: 355px;
+        left: 540px; }
+      #heroes .background .profiles a#profile-bobr {
+        background-image: url("../img/heroes/bobr.png");
+        top: 70px;
+        left: 640px; }
+      #heroes .background .profiles a#profile-krtek {
+        background-image: url("../img/heroes/krtek.png");
+        top: 180px;
+        left: 640px; }
+      #heroes .background .profiles a#profile-sovicka {
+        background-image: url("../img/heroes/sovicka.png");
+        top: 290px;
+        left: 640px; }
+      #heroes .background .profiles a#profile-kocka {
+        background-image: url("../img/heroes/kocka.png");
+        top: 400px;
+        left: 640px; }
+      #heroes .background .profiles a#profile-prase {
+        background-image: url("../img/heroes/prase.png");
+        top: 125px;
+        left: 740px; }
+      #heroes .background .profiles a#profile-medved {
+        background-image: url("../img/heroes/medved.png");
+        top: 245px;
+        left: 740px; }
+      #heroes .background .profiles a#profile-myska {
+        background-image: url("../img/heroes/myska.png");
+        top: 355px;
+        left: 740px; }
+
+div.menu {
+  width: 2040px;
+  height: 768px; }
+
+.zoomed {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transition: all 1s ease; }
+
+#background-animation {
+  top: 0px;
+  left: 0;
+  z-index: 999; }
+
+#srnka-background-animation {
+  top: 140px;
+  left: 0;
+  z-index: 1005; }
+  #srnka-background-animation svg {
+    width: 450px;
+    height: 410px; }
+
+#srnka-animation {
+  top: 366px;
+  left: 49px;
+  z-index: 1010; }
+  #srnka-animation svg {
+    width: 450px; }
+
+#river-brown-animation, #river-blue-animation {
+  top: 286px;
+  left: 258px;
+  z-index: 999; }
+
+#river-blue-animation {
+  z-index: 1000;
+  top: 282px; }
+
+#bobr-animation {
+  top: 540px;
+  left: 458px;
+  z-index: 1010; }
+  #bobr-animation svg {
+    width: 450px; }
+
+#rocks-animation {
+  top: 551px;
+  left: -25px;
+  z-index: 1001; }
+
+#pes-animation {
+  top: 416px;
+  left: 365px;
+  z-index: 1010; }
+
+#pes-background-animation {
+  top: 546px;
+  left: -28px;
+  z-index: 1001; }
+  #pes-background-animation svg {
+    width: 508px;
+    height: 194px; }
+
+#krava-animation {
+  top: 496px;
+  left: 1030px;
+  z-index: 1010; }
+
+#krava-background-animation {
+  top: 441px;
+  left: 855px;
+  z-index: 1000; }
+  #krava-background-animation svg {
+    width: 1190px; }
+
+#kocka-animation {
+  top: 495px;
+  left: 1544px;
+  z-index: 1010; }
+
+#kocka-background-animation {
+  top: 321px;
+  left: 1524px;
+  z-index: 1000; }
+
+#medved-animation {
+  top: 176px;
+  left: 1450px;
+  z-index: 1010; }
+
+#medved-background-animation {
+  top: 56px;
+  left: 1450px;
+  z-index: 1000; }
+
+#medved-background2-animation {
+  top: -4px;
+  left: 1450px;
+  z-index: 1005; }
+
+#mys-animation {
+  top: 296px;
+  left: 1030px;
+  z-index: 1010; }
+
+#mys-background-animation {
+  top: 251px;
+  left: 944px;
+  z-index: 1000; }
+
+#bogeyman-animation {
+  top: 210px;
+  left: 390px;
+  z-index: 1010; }
+
+#krtek-animation {
+  top: 307px;
+  left: 760px;
+  z-index: 1010; }
+  #krtek-animation svg {
+    width: 170px;
+    height: 166px; }
+
+#krtek-background-animation {
+  top: 264px;
+  left: 566px;
+  z-index: 1000; }
+  #krtek-background-animation svg {
+    width: 250px;
+    height: 204px; }
+
+#sova-animation {
+  top: 96px;
+  left: 740px;
+  z-index: 1010; }
+
+#sova-background-animation {
+  top: 0px;
+  left: 0px;
+  z-index: 998; }
+
+#prase-animation {
+  top: 405px;
+  left: 1954px;
+  z-index: 1010; }
+
+#prase-background-animation {
+  top: 194px;
+  left: 1646px;
+  z-index: 1006; }
+  #prase-background-animation svg {
+    width: 410px;
+    height: 418px; }
+
+.html-animation {
+  position: absolute; }
+
+#quiz1 .background {
+  background: url("../img/quiz1-background.png") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+
+#quiz2 .background {
+  background: url("../img/quiz2-background.jpg") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+
+#quiz3 .background {
+  background: url("../img/quiz3-background.png") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+  #quiz3 .background .background-layer2 {
+    background: url("../img/quiz3-background-layer2.png") no-repeat top center;
+    width: 531px;
+    height: 350px;
+    background-size: cover;
+    position: relative;
+    left: 240px;
+    top: 140px;
+    pointer-events: none; }
+  #quiz3 .background .background-layer3 {
+    background: url("../img/quiz3-background-layer3.png") no-repeat top center;
+    width: 166px;
+    height: 131px;
+    background-size: cover;
+    position: relative;
+    left: 90px;
+    top: 195px;
+    z-index: 111;
+    pointer-events: none; }
+  #quiz3 .background .bacilli {
+    background: url("../img/quiz3-bacilli.png") no-repeat top center;
+    width: 20px;
+    height: 25px;
+    background-size: cover;
+    position: absolute; }
+    #quiz3 .background .bacilli#bacilli-1 {
+      top: 345px;
+      left: 260px; }
+    #quiz3 .background .bacilli#bacilli-2 {
+      top: 430px;
+      left: 290px; }
+    #quiz3 .background .bacilli#bacilli-3 {
+      top: 360px;
+      left: 390px;
+      z-index: 110; }
+    #quiz3 .background .bacilli#bacilli-4 {
+      top: 183px;
+      left: 426px; }
+    #quiz3 .background .bacilli#bacilli-5 {
+      top: 210px;
+      left: 555px; }
+    #quiz3 .background .bacilli#bacilli-6 {
+      top: 340px;
+      left: 620px; }
+    #quiz3 .background .bacilli#bacilli-7 {
+      top: 434px;
+      left: 538px; }
+    #quiz3 .background .bacilli a {
+      display: none;
+      width: 20px;
+      height: 25px;
+      position: relative;
+      z-index: 10000; }
+  #quiz3 .background .progress-bar {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    width: 60px; }
+    #quiz3 .background .progress-bar li {
+      display: block; }
+      #quiz3 .background .progress-bar li div {
+        display: block;
+        background: url("../img/quiz3-archivement-empty.png") no-repeat top center;
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        margin-bottom: 18px; }
+        #quiz3 .background .progress-bar li div.full {
+          background-image: url("../img/quiz3-archivement-full.png"); }
+
+#quiz4 .background {
+  background: url("../img/quiz4-background.png") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+  #quiz4 .background .difference {
+    width: 20px;
+    height: 25px;
+    background-size: cover;
+    position: absolute; }
+    #quiz4 .background .difference#difference-1 {
+      top: 135px;
+      left: 605px;
+      width: 80px;
+      height: 40px; }
+    #quiz4 .background .difference#difference-2 {
+      top: 190px;
+      left: 495px;
+      width: 310px;
+      height: 85px; }
+    #quiz4 .background .difference#difference-3 {
+      top: 320px;
+      left: 518px;
+      width: 35px;
+      height: 50px; }
+    #quiz4 .background .difference#difference-4 {
+      top: 327px;
+      left: 658px;
+      width: 51px;
+      height: 71px; }
+    #quiz4 .background .difference#difference-5 {
+      top: 370px;
+      left: 567px;
+      width: 70px;
+      height: 54px; }
+    #quiz4 .background .difference#difference-6 {
+      top: 350px;
+      left: 746px;
+      width: 35px;
+      height: 40px; }
+    #quiz4 .background .difference#difference-7 {
+      top: 289px;
+      left: 784px;
+      width: 87px;
+      height: 53px; }
+    #quiz4 .background .difference a {
+      display: none;
+      width: 20px;
+      height: 25px;
+      position: relative;
+      z-index: 10000; }
+  #quiz4 .background .progress-bar {
+    position: absolute;
+    top: 480px;
+    left: 185px; }
+    #quiz4 .background .progress-bar li div {
+      display: block;
+      background: url("../img/quiz4-archivement-empty.png") no-repeat top center;
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+      margin-right: 12px; }
+      #quiz4 .background .progress-bar li div.full {
+        background-image: url("../img/quiz4-archivement-full.png"); }
+#quiz4:after {
+  display: none;
+  content: url("../img/quiz4-archivement-full.png"); }
+
+#quiz5 .background {
+  background: url("../img/quiz5-background.png") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+  #quiz5 .background #glass {
+    height: 430px;
+    width: 340px;
+    background-image: url("../img/quiz5-glass.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: relative;
+    top: 110px;
+    left: 470px; }
+    #quiz5 .background #glass.level-2 {
+      background-position: -340px 0; }
+    #quiz5 .background #glass.level-3 {
+      background-position: -680px 0; }
+    #quiz5 .background #glass.level-4 {
+      background-position: -1020px 0; }
+    #quiz5 .background #glass.level-5 {
+      background-position: -1360px 0; }
+    #quiz5 .background #glass.level-6 {
+      background-position: -1700px 0; }
+    #quiz5 .background #glass.level-7 {
+      background-position: -2040px 0; }
+    #quiz5 .background #glass.level-8 {
+      background-position: -2380px 0; }
+    #quiz5 .background #glass.level-9 {
+      background-position: -2720px 0; }
+    #quiz5 .background #glass.level-10 {
+      background-position: -3060px 0; }
+  #quiz5 .background .drop a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100; }
+    #quiz5 .background .drop a.done {
+      transition: all 0.3s ease; }
+    #quiz5 .background .drop a.blue {
+      top: 443px;
+      left: 160px;
+      width: 50px;
+      height: 60px;
+      background-image: url("../img/quiz5-drop-blue.png");
+      z-index: 101; }
+    #quiz5 .background .drop a.brown {
+      top: 443px;
+      left: 230px;
+      width: 44px;
+      height: 62px;
+      background-image: url("../img/quiz5-drop-brown.png"); }
+    #quiz5 .background .drop a.purple {
+      top: 443px;
+      left: 290px;
+      width: 43px;
+      height: 65px;
+      background-image: url("../img/quiz5-drop-purple.png");
+      z-index: 102; }
+#quiz5 #quiz5-canvas {
+  position: absolute;
+  top: 250px;
+  left: 80px; }
+
+#quiz6 .background {
+  background: url("../img/quiz6-background.png") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+  #quiz6 .background .link {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    transition: all 0.3s ease; }
+    #quiz6 .background .link.active {
+      opacity: 0.7;
+      transition: all 0.3s ease; }
+    #quiz6 .background .link.done {
+      opacity: 0.3;
+      transition: all 0.3s ease; }
+    #quiz6 .background .link#tooth-1 {
+      top: 130px;
+      left: 105px;
+      background-image: url("../img/quiz6-tooth1.png"); }
+    #quiz6 .background .link#tooth-2 {
+      top: 275px;
+      left: 105px;
+      background-image: url("../img/quiz6-tooth2.png"); }
+    #quiz6 .background .link#tooth-3 {
+      top: 420px;
+      left: 105px;
+      background-image: url("../img/quiz6-tooth3.png"); }
+    #quiz6 .background .link#tool-1 {
+      top: 130px;
+      left: 650px;
+      background-image: url("../img/quiz6-tool1.png"); }
+    #quiz6 .background .link#tool-2 {
+      top: 275px;
+      left: 650px;
+      background-image: url("../img/quiz6-tool2.png"); }
+    #quiz6 .background .link#tool-3 {
+      top: 420px;
+      left: 650px;
+      background-image: url("../img/quiz6-tool3.png"); }
+    #quiz6 .background .link a {
+      display: none;
+      width: 20px;
+      height: 25px;
+      position: relative;
+      z-index: 10000; }
+
+#quiz7 .background {
+  background: url("../img/quiz7-background.jpg") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+
+#quiz8 .background {
+  background: url("../img/quiz8-background.png") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+  #quiz8 .background .food a {
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100; }
+    #quiz8 .background .food a.done {
+      opacity: 0.3;
+      transition: all 0.3s ease; }
+    #quiz8 .background .food a#food-6 {
+      top: 30px;
+      left: 90px;
+      background-image: url("../img/quiz8-unhealthy1.png"); }
+    #quiz8 .background .food a#food-1 {
+      top: 30px;
+      left: 250px;
+      background-image: url("../img/quiz8-healthy1.png"); }
+    #quiz8 .background .food a#food-7 {
+      top: 30px;
+      left: 410px;
+      background-image: url("../img/quiz8-unhealthy2.png"); }
+    #quiz8 .background .food a#food-2 {
+      top: 30px;
+      left: 570px;
+      background-image: url("../img/quiz8-healthy2.png"); }
+    #quiz8 .background .food a#food-3 {
+      top: 30px;
+      left: 730px;
+      background-image: url("../img/quiz8-healthy3.png"); }
+    #quiz8 .background .food a#food-4 {
+      top: 120px;
+      left: 90px;
+      background-image: url("../img/quiz8-healthy4.png"); }
+    #quiz8 .background .food a#food-8 {
+      top: 120px;
+      left: 250px;
+      background-image: url("../img/quiz8-unhealthy3.png"); }
+    #quiz8 .background .food a#food-9 {
+      top: 110px;
+      left: 410px;
+      background-image: url("../img/quiz8-unhealthy4.png"); }
+    #quiz8 .background .food a#food-10 {
+      top: 120px;
+      left: 570px;
+      background-image: url("../img/quiz8-unhealthy5.png"); }
+    #quiz8 .background .food a#food-5 {
+      top: 120px;
+      left: 730px;
+      background-image: url("../img/quiz8-healthy5.png"); }
+  #quiz8 .background #healthy, #quiz8 .background #unhealthy {
+    position: absolute;
+    left: 10px;
+    top: 210px;
+    width: 400px;
+    height: 350px; }
+  #quiz8 .background #unhealthy {
+    left: 473px; }
+
+#quiz9 .background {
+  background: url("../img/quiz9-background.png") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+  #quiz9 .background .objects a {
+    width: 120px;
+    height: 120px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100; }
+    #quiz9 .background .objects a.done {
+      transition: all 0.3s ease; }
+    #quiz9 .background .objects a#object-1 {
+      top: 410px;
+      left: 30px;
+      width: 69px;
+      height: 149px;
+      background-image: url("../img/quiz9-object1.png"); }
+    #quiz9 .background .objects a#object-2 {
+      top: 430px;
+      left: 100px;
+      width: 94px;
+      height: 126px;
+      background-image: url("../img/quiz9-object2.png"); }
+    #quiz9 .background .objects a#object-3 {
+      top: 440px;
+      left: 200px;
+      width: 83px;
+      height: 105px;
+      background-image: url("../img/quiz9-object3.png"); }
+    #quiz9 .background .objects a#object-4 {
+      top: 437px;
+      left: 270px;
+      width: 176px;
+      height: 95px;
+      background-image: url("../img/quiz9-object4.png"); }
+    #quiz9 .background .objects a#object-5 {
+      top: 430px;
+      left: 450px;
+      width: 138px;
+      height: 131px;
+      background-image: url("../img/quiz9-object5.png"); }
+    #quiz9 .background .objects a#object-6 {
+      top: 430px;
+      left: 570px;
+      width: 93px;
+      height: 109px;
+      background-image: url("../img/quiz9-object6.png"); }
+    #quiz9 .background .objects a#object-7 {
+      top: 440px;
+      left: 664px;
+      width: 102px;
+      height: 89px;
+      background-image: url("../img/quiz9-object7.png"); }
+    #quiz9 .background .objects a#object-8 {
+      top: 443px;
+      left: 760px;
+      width: 107px;
+      height: 97px;
+      background-image: url("../img/quiz9-object8.png"); }
+
+#quiz10 .background {
+  background: url("../img/quiz10-background.png") no-repeat top center;
+  background-size: cover;
+  width: 903px;
+  height: 593px;
+  position: relative; }
+  #quiz10 .background .teeth a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100; }
+    #quiz10 .background .teeth a.done {
+      transition: all 0.3s ease; }
+    #quiz10 .background .teeth a#tooth-1 {
+      top: 443px;
+      left: 160px;
+      width: 50px;
+      height: 60px;
+      background-image: url("../img/quiz10-tooth1.png");
+      z-index: 101; }
+    #quiz10 .background .teeth a#tooth-2 {
+      top: 443px;
+      left: 230px;
+      width: 44px;
+      height: 62px;
+      background-image: url("../img/quiz10-tooth2.png"); }
+    #quiz10 .background .teeth a#tooth-3 {
+      top: 443px;
+      left: 290px;
+      width: 43px;
+      height: 65px;
+      background-image: url("../img/quiz10-tooth3.png");
+      z-index: 102; }
+    #quiz10 .background .teeth a#tooth-4 {
+      top: 443px;
+      left: 350px;
+      width: 34px;
+      height: 66px;
+      background-image: url("../img/quiz10-tooth4.png");
+      z-index: 103; }
+    #quiz10 .background .teeth a#tooth-5 {
+      top: 443px;
+      left: 410px;
+      width: 35px;
+      height: 55px;
+      background-image: url("../img/quiz10-tooth5.png");
+      z-index: 104; }
+    #quiz10 .background .teeth a#tooth-6 {
+      top: 443px;
+      left: 470px;
+      width: 44px;
+      height: 62px;
+      background-image: url("../img/quiz10-tooth6.png"); }
+    #quiz10 .background .teeth a#tooth-7 {
+      top: 443px;
+      left: 530px;
+      width: 45px;
+      height: 62px;
+      background-image: url("../img/quiz10-tooth7.png");
+      z-index: 102; }
+    #quiz10 .background .teeth a#tooth-8 {
+      top: 443px;
+      left: 590px;
+      width: 47px;
+      height: 54px;
+      background-image: url("../img/quiz10-tooth8.png");
+      z-index: 101; }
+    #quiz10 .background .teeth a#tooth-9 {
+      top: 443px;
+      left: 650px;
+      width: 34px;
+      height: 54px;
+      background-image: url("../img/quiz10-tooth9.png");
+      z-index: 104; }
+    #quiz10 .background .teeth a#tooth-10 {
+      top: 443px;
+      left: 700px;
+      width: 34px;
+      height: 66px;
+      background-image: url("../img/quiz10-tooth10.png");
+      z-index: 103; }

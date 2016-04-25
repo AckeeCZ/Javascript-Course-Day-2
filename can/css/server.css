@@ -1,0 +1,124 @@
+#wrap {
+  width: 960px;
+  margin: 50px auto 0 auto; }
+
+h1 {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 10px; }
+  h1 span {
+    color: #666666;
+    font-size: 55%;
+    padding-top: 15px; }
+
+.utility .glyphicon {
+  position: relative;
+  top: 3px; }
+.utility .delete {
+  color: #d44950; }
+
+.finish {
+  width: 100%; }
+
+#stats {
+  margin-bottom: 2em; }
+  #stats img {
+    width: 85px;
+    height: 85px; }
+  #stats > .row {
+    margin-top: 1em; }
+
+.line-bobr .status {
+  background-color: #ffe186; }
+
+.line-sovicka .status {
+  background-color: #a8c399; }
+
+.line-srna .status {
+  background-color: #e5aebf; }
+
+.line-kravicka .status {
+  background-color: #7fbbc6; }
+
+.line-myska .status {
+  background-color: #8591b6; }
+
+.line-pes .status {
+  background-color: #af89ab; }
+
+.line-krtek .status {
+  background-color: #f16e5d; }
+
+.line-prase .status {
+  background-color: #91d0c5; }
+
+.line-medved .status {
+  background-color: #fcb87a; }
+
+.line-kocka .status {
+  background-color: #d693bf; }
+
+.status {
+  border-radius: 8px;
+  background: red;
+  padding: 10px;
+  min-height: 30px;
+  box-shadow: 5px 5px 10px #aaaaaa;
+  margin-top: 12px; }
+  .status > div {
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block; }
+    .status > div.tooth-white {
+      background-image: url("../img/tooth-white.png"); }
+    .status > div.tooth-black {
+      background-image: url("../img/tooth-black.png"); }
+    .status > div.tooth-none {
+      background-image: url("../img/tooth-none.png"); }
+
+#server {
+  -webkit-column-gap: 400px;
+  -moz-column-gap: 400px;
+  column-gap: 400px; }
+  #server img {
+    width: 85px;
+    height: 85px;
+    margin-right: 30px; }
+  #server .number {
+    color: black;
+    font-family: Sans-Serif;
+    font-size: 15px;
+    position: absolute;
+    top: 55px;
+    left: 55px;
+    text-align: right; }
+    #server .number span {
+      text-align: center;
+      padding-top: 5px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.6); }
+  #server td {
+    position: relative; }
+  #server .line-bobr .status {
+    background-color: #ffe186; }
+  #server .line-sovicka .status {
+    background-color: #a8c399; }
+  #server .line-srna .status {
+    background-color: #e5aebf; }
+  #server .line-kravicka .status {
+    background-color: #7fbbc6; }
+  #server .line-myska .status {
+    background-color: #8591b6; }
+  #server .line-pes .status {
+    background-color: #af89ab; }
+  #server .line-krtek .status {
+    background-color: #f16e5d; }
+  #server .line-prase .status {
+    background-color: #91d0c5; }
+  #server .line-medved .status {
+    background-color: #fcb87a; }
+  #server .line-kocka .status {
+    background-color: #d693bf; }
