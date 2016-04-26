@@ -21,14 +21,11 @@ $(function(){
 		var pixelColor = context.getImageData(x, y, 1, 1).data;
 
 		var color = "rgba("+pixelColor.join(", ")+")";
-		console.log(color);
+		//console.log(color);
 
 		$("#colorBox").css("background-color", color);
 
 		$("#colorMouseBox").css({"top": y+5, "left": x, "background-color": color});
-	}).mouseleave(function(){
-		$("#colorMouseBox").hide();
-	}).mouseenter(function(){
 		$("#colorMouseBox").show();
 	});
 
