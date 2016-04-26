@@ -4,11 +4,34 @@
 <head>
     <title>Canvas example</title>
 
+    <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
-    <link rel="stylesheet" href="css/style.css"/>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+
+    <style>
+    	#canvas{
+    		border: 1px solid black;
+    	}
+    	#colorBox, #colorMouseBox{
+    		width: 30px;
+    		height: 30px;
+    		border: 1px solid black;
+    	}
+    	#colorMouseBox{
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		box-shadow: 1px 1px 1px 1px white;
+    		display: none;
+    	}
+    </style>
+
 </head>
-<body onload="draw();">
-   
+<body>
+   <canvas id="canvas" width="500" height="300"></canvas>
+
+   <div id="colorBox"></div>
+
+   <div id="colorMouseBox"></div>
 </body>
 </html>
