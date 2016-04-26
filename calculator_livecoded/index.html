@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h1>Calculator</h1>
+		<table>
+			<tr>
+				<td colspan="4">
+					<input id="display" type="text" onclick="process(this.value)" value="0" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" onclick="process(this.value)" value="7" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="8" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="9" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="/" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" onclick="process(this.value)" value="4" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="5" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="6" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="*" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" onclick="process(this.value)" value="1" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="2" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="3" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="-" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" onclick="process(this.value)" value="0" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="." />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="+" />
+				</td>
+				<td>
+					<input type="button" onclick="process(this.value)" value="=" />
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
